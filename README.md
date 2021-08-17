@@ -17,4 +17,6 @@ https://www.w3schools.com/html/html_intro.asp
 
 ```
 <tagname>CONTENTS</tagname>
+
+** 시작태그만 있는 Element : Empty element
 ```
