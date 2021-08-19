@@ -205,6 +205,6 @@ https://www.w3schools.com/css/css_selectors.asp
 
 https://www.w3schools.com/css/css_howto.asp
 
-> External CSS (가장 기본적인 방식)
-> Internal CSS (부득이하게 써야하는 경우 사용)
-> Inline CSS (js에서 css를 제어할때 사용)
+> - External CSS (가장 기본적인 방식)
+> - Internal CSS (부득이하게 써야하는 경우 사용)
+> - Inline CSS (js에서 css를 제어할때 사용)
