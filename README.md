@@ -289,13 +289,21 @@ https://www.w3schools.com/css/css3_flexbox_container.asp
 > - 가로배치, 세로배치 모두 제어가 가능함
 > - 가로배치가 기본값
 
+> justify-content, align-items의 방향이 flex-direction의 설정에 의해서 뒤바뀔수 있음
+
 ### 반응형 웹
 
 > 반응형 웹, 적응형 웹
 > OSMU(One Source Multi Use) 여부로 반응형과 적응형을 구분한다.
 > Web Front End 에서의 OSMU 의 기준은 HTML Source code => Contents
 
+### RWD Viewport
+
+https://www.w3schools.com/css/css_rwd_viewport.asp
+
 ### Media Query
+
+https://www.w3schools.com/css/css_rwd_mediaqueries.asp
 
 > @media 키워드를 사용해서 break point를 설정하고, 그에 따른 독립된 코드 블럭을 실행할 수 있게 하는 것
 > break point (변경점)
@@ -318,3 +326,39 @@ body{}
 
 이렇게 설정해줘야 정상적 실행
 ```
+
+\*\* 가운데 정렬/배치 방식
+
+> 가로방향
+>
+> text-align: center; - 텍스트, 인라인
+> margin-left, margin-right: auto; - 가로길이가 정해진 블럭요소
+> justify-content: center; - flex 박스 배치
+
+> 세로방향
+>
+> align-items: center; - flex 박스 배치
+> line-height : 텍스트
+
+### CSS display
+
+https://www.w3schools.com/cssref/pr_class_display.asp
+
+### 복합(조합) 선택자
+
+> div p{} : 공백 - 자손 선택자 : 자식요소, 자손요소 모두 선택
+> div>p{} : > - 자식 선택자 : 자식요소만 선택
+
+### 가상 클래스
+
+> Element의 상태 구분
+>
+> - a:link
+> - a:visited
+> - a:hover
+> - a:active
+
+> Element의 특정 요소를 선택
+>
+> - .list-item:first-child{} : 첫번째 요소 선택
+> - .list-item:last-child{} : 마지막 요소 선택
