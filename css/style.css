@@ -4,7 +4,7 @@
 */
 
 /* reset css */
-/* 주석다는법 컨트롤 슬래쉬 */
+
 html,
 body,
 div,
@@ -133,22 +133,28 @@ table {
 /* font-family: 'Montserrat', sans-serif; */
 /* font-family: 'Nunito Sans', sans-serif; */
 /* font-family: 'NanumSquare', sans-serif; */
+
 /* page css */
+
 .header {
   height: 100px;
   display: flex;
   justify-content: space-between;
   padding: 0px 100px;
 }
+
 .logo {
   margin-top: 38px;
 }
+
 .gnb {
   margin-top: 45px;
 }
+
 .gnb-list {
   display: flex;
 }
+
 .gnb-list-item {
   font-family: "Montserrat", sans-serif;
   font-weight: 500;
@@ -160,9 +166,25 @@ table {
   text-decoration: none;
 }
 .gnb-list-link:hover {
-  color: rgb(16, 201, 195); /* 10진수 */
-  color: rgba(16, 201, 195, 0.6); /* a는 투명도 (0.0 ~ 1.0)*/
+  color: rgb(16, 201, 195);
+  /* a : 투명도(0.0 ~ 1.0) */
+  color: rgba(16, 201, 195, 0.6);
 }
+.hamburger-menu {
+  width: 30px;
+  height: 30px;
+  /* transparent : 투명색 */
+  background-color: transparent;
+  border: 0;
+
+  display: none;
+}
+
+.hamburger-menu > img {
+  width: 30px;
+  height: 30px;
+}
+
 .section01 {
   height: 315px;
   background-color: #f6f6f6;
@@ -184,6 +206,7 @@ table {
   line-height: 1.6;
   font-style: italic;
 }
+
 .more-link {
   display: inline-block;
   width: 100px;
@@ -194,26 +217,35 @@ table {
   color: #191919;
   margin-top: 20px;
 }
+
 .more-link:hover {
   background: red;
   color: #fff;
 }
+
+.tab {
+  display: none;
+}
+
 .group {
   display: flex;
   justify-content: center;
 }
+
 .figure {
   width: 340px;
   height: 300px;
   overflow: hidden;
 }
+
 .figure-image {
-  width: 340px;
   height: 300px;
 }
+
 .figure-video {
   height: 300px;
 }
+
 .footer {
   height: 280px;
   background-color: #141414;
@@ -225,11 +257,12 @@ table {
   font-size: 15px;
   box-sizing: border-box;
 }
+
 .copyright-company {
   font-family: "Montserrat", sans-serif;
   font-weight: 600;
   font-size: 18px;
-  margin-bottom: 29px;
+  margin-bottom: 27px;
 }
 .sitemap {
   display: flex;
@@ -243,37 +276,90 @@ table {
   width: 60px;
   margin-left: 55px;
 }
+
 @media screen and (max-width: 900px) {
   .header {
-    height: auto;
-    flex-direction: column;
-    padding: 0 0 10px 0;
+    height: 50px;
+    /* flex-direction: column; */
+    padding: 0 20px 10px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    /* position:absolute/fixed 설정시 width는 자식요소에 맞춰짐 */
+    width: 100%;
+    box-sizing: border-box;
+    background-color: #ffffff;
   }
   .logo {
     margin-top: 10px;
-    /* 인라인 요소에 text-align 적용 가능 */
+    /* 인라인 요소에 tet-align을 적용 가능 */
     text-align: center;
   }
   .gnb {
-    margin-top: 15px;
+    margin-top: 0;
+    position: absolute;
+    top: 50px;
+    right: -200px;
+    opacity: 0;
+    background-color: #ffffff;
+    width: 200px;
+    padding: 50px 30px 100px;
+    box-sizing: border-box;
+
+    transition: opacity 0.3s ease-out, right 0.3s ease-out;
   }
+
+  .gnb.active {
+    opacity: 1;
+    right: 0;
+  }
+
   .gnb-list {
     justify-content: center;
+    flex-direction: column;
   }
-  .gnb-list-item:first-child {
+  .gnb-list-item {
     margin-left: 0;
+    margin-bottom: 70px;
   }
+
+  .hamburger-menu {
+    display: block;
+    margin-top: 6px;
+  }
+
   .section-heading {
     font-size: 24px;
   }
+
   .paragraph {
-    padding: 0 20px;
+    padding: 0 25px;
   }
+
   .paragraph br {
     display: none;
   }
+  .tab {
+    display: flex;
+    width: 340px;
+    margin: 30px auto;
+  }
+  .tab-item {
+    width: 33.333%;
+    background: #eeeeee;
+    text-align: center;
+    padding: 10px 0;
+  }
+  .tab-item.active {
+    background: #17b7d4;
+    color: #ffffff;
+  }
   .group {
     flex-direction: column;
+    display: none;
+  }
+  .group.active {
+    display: flex;
   }
   .figure {
     margin: 10px auto;
